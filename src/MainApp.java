@@ -8,9 +8,9 @@ import org.jsoup.select.Elements;
 
 public class MainApp {
 	public static void main(String args[]) {
-		String projectId;
+		Project projectID = new Project();
 		
-		String html = "http://localhost/FrontPage." + projectId + ".SuiteRegressionTesting";
+		String html = "http://localhost/FrontPage." + projectID.getProjectId() + ".SuiteRegressionTesting";
 		try {
 			Document doc = Jsoup.connect(html).get();
 			Elements tableElements = doc.select("table");
